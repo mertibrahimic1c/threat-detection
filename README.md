@@ -1,11 +1,11 @@
-# threat-detection
+# Threat-detection
 
-## Hakkında
-Bu sistem, video görüntülerini gerçek zamanlı olarak analiz ederek nesneleri tespit eder ve tehlikeli mi güvenli mi olduğuna karar verir. Bıçak, makas gibi tehlikeli nesneler kırmızı kutu ile, kitap, bardak gibi güvenli nesneler yeşil kutu ile gösterilir.
+## About
+This system analyzes video footage in real-time to detect objects and determine whether they are dangerous or safe. Dangerous objects such as knives and scissors are highlighted with a red bounding box, while safe objects like books and cups are marked in green.
 
-Amaç, güvenlik sistemlerine entegre edilebilecek otomatik bir tehdit algılama katmanı sunmaktır. Örneğin anaokulları, okullar veya kamu alanlarındaki güvenlik kameralarına entegre edilerek manuel izleme ihtiyacı olmadan tehlikeli nesneler tespit edilebilir.
+The goal is to provide an automated security layer that can be integrated into surveillance systems — for example, detecting dangerous objects in schools, kindergartens, or public areas without requiring manual monitoring.
 
-API kullanımını minimize etmek için sonuçlar JSON dosyasına kaydedilir. Her nesne Gemini AI'ya yalnızca bir kez sorulur, sonraki tespitlerde cache'den okunur. Bu sayede hem maliyet hem de yanıt süresi azaltılır.
+To minimize API usage, classification results are cached locally. Each unique object is sent to Gemini AI only once, and future detections reuse the stored result — reducing both cost and response time.
  
 # AI-Driven Threat Detection System
 
